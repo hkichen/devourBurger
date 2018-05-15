@@ -13,7 +13,7 @@ module.exports = {
   selectAll: function() {
     connection.query('select * from burgers;', function(req, res) {
       //grab all burgers currently in the database
-    })
+    });
   },
 
   insertOne: function() {
@@ -25,6 +25,6 @@ module.exports = {
   updateOne: function() {
     connection.query("update burger set ?? to ?? where ??;", function(req, res) {
       //make it so that you grab updated info from html input page, specified by burger id
-    })
+    });
   }
-}
+};
