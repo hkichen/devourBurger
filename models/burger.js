@@ -14,8 +14,7 @@ var burger = {
   },
 
   insertOne: function(cols, vals, cb) {
-    var queryString = [//things that you want to add into the table???]
-    orm.insertOne("burger", cols, vals, function(res) {
+      orm.insertOne("burger", cols, vals, function(res) {
       cb(res);
     })
   },
@@ -25,5 +24,8 @@ var burger = {
       cb(res);
     })
   }
+};
 
-}
+module.exports = burger;
+
+//Do we need a var queryString??
