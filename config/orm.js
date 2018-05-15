@@ -7,3 +7,24 @@
 //`insertOne()`
 //`updateOne()`
 //Export the ORM object in `module.exports`.
+var connection = require('../config/connection.js');
+
+module.exports = {
+  selectAll: function() {
+    connection.query('select * from burgers;', function(req, res) {
+      //grab all burgers currently in the database
+    })
+  },
+
+  insertOne: function() {
+    connection.query("insert into burgers(burger_name, devoured) values (" + newBurger + ", ", function(req, res) {
+      //add burger from htmo input page
+    });
+  },
+
+  updateOne: function() {
+    connection.query("update burger set ?? to ?? where ??;", function(req, res) {
+      //make it so that you grab updated info from html input page, specified by burger id
+    })
+  }
+}
