@@ -27,5 +27,3 @@ var burger = {
 };
 
 module.exports = burger;
-
-//Do we need a var queryString??
