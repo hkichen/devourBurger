@@ -22,9 +22,4 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 //set up route usage
-app.use(routes, function(err) {
-  if (err) {
-    console.log(err)
-  }
-  console.log("Routing...")
-});
+app.use(routes);

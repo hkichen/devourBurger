@@ -21,9 +21,9 @@ router.get("/", function(req, res) {
 //add burger to database
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
-    "burger_name", "Turkey Burger"
+    "burger_name", "devoured"
   ], [
-    req.body.name, req.body.turkeyBurger
+    req.body.burger_name, req.body.devoured
   ], function(result) {
     res.json({
       id: result.insertId 
@@ -38,9 +38,9 @@ router.put("api/burgers/:id", function(req,res) {
   console.log("condition: " + condition);
   
   burger.updateOne({
-    turkeyBurger: req.body.turkeyBurger
+    devoured: req.body.devoured
   }, condition, function(result) {
-    if(result.devoured === 0) {
+    if(result.changedRows == 0) {
       return res.status(404).end();
     }else {
       res.status(200).end();
@@ -48,4 +48,12 @@ router.put("api/burgers/:id", function(req,res) {
   });
 });
 
+router.delete("/api/burgers/:id", function(result){
+  if (result.affectedRows == 0) {
+    return res.status(404).end();
+  }else {
+    res.status(200).end();
+  }
+})
 
+module.exports = router;
