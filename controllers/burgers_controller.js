@@ -18,6 +18,7 @@ router.get("/", function(req, res) {
   });
 });
 
+//add burger to database
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
     "burger_name", "Turkey Burger"
@@ -27,6 +28,23 @@ router.post("/api/burgers", function(req, res) {
     res.json({
       id: result.insertId 
     });
+  });
+});
+
+//update burger info
+router.put("api/burgers/:id", function(req,res) {
+  var condition = "id =" + req.params.id;
+  
+  console.log("condition: " + condition);
+  
+  burger.updateOne({
+    turkeyBurger: req.body.turkeyBurger
+  }, condition, function(result) {
+    if(result.devoured === 0) {
+      return res.status(404).end();
+    }else {
+      res.status(200).end();
+    }
   });
 });
 
