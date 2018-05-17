@@ -7,18 +7,13 @@ var burger = require("../models/burger.js");
 var express = require("express");
 var router = express.Router();
 
-//set up routes
-router.get("/", function(err, req, res) {
-  if (err) {
-    console.log(err);
-  }
-  burger.selectAll(function(data) {
-    var hbsObj = {
-      burgers: data
-    }
-    console.log(hbsObj);
-    res.render("index", hbsObj);
-  });
+//set up main route
+router.get("/", function(req, res) {
+  // burger.selectAll(function(data) {
+  //   console.log(data);
+  //   res.render("index", {data});
+  // });
+  res.render("index");
 });
 
 //add burger to database
