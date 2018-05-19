@@ -12,7 +12,7 @@ An app to make you crave an actual burger; This app allows you to read a from a 
 
 Click on the link to access the app (deployed on Heroku). Dowload or clone the repository off of GitHub if you would like to contribute or change the app.
 
-Heroku:
+Heroku: https://afternoon-oasis-10586.herokuapp.com/
 
 GitHub Repo: https://github.com/hkichen/devourBurger
 
