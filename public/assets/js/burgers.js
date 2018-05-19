@@ -2,7 +2,7 @@
 $(function() {
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
-    var newDevoured = $(this).data("newdevoured");
+    var newDevoured = $(this).data("newDevoured");
 
     var newDevouredState = {
       devoured: newDevoured
@@ -27,7 +27,7 @@ $(function() {
 
     var newBurger = {
       name: $("#burg").val().trim(),
-      sleepy: $("[burger_name=devoured]:checked").val().trim()
+      sleepy: $("[burger_name=devoured]:checked").val()
     };
 
     // Send the POST request.
