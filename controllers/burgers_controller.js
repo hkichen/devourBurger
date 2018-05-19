@@ -1,19 +1,16 @@
-//Inside the `burgers_controller.js` file, import the following:
-//Express
-//`burger.js`
-//Create the `router` for the app, and export the `router` at the end of your file.
-
 var burger = require("../models/burger.js");
 var express = require("express");
 var router = express.Router();
 
 //set up main route
 router.get("/", function(req, res) {
-  // burger.selectAll(function(data) {
-  //   console.log(data);
-  //   res.render("index", {data});
-  // });
-  res.render("index");
+  burger.selectAll(function(data) {
+    var hbsObject = {
+      burgers: data
+    };
+    console.log(hbsObject);
+    res.render("index", hsbObject);
+  });
 });
 
 //add burger to database
@@ -33,7 +30,7 @@ router.post("/api/burgers", function(req, res) {
 router.put("api/burgers/:id", function(req, res) {
   var condition = "id =" + req.params.id;
   
-  console.log("condition: " + condition);
+  console.log("condition: " , condition);
   
   burger.updateOne({
     devoured: req.body.devoured

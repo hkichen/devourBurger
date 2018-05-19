@@ -1,0 +1,19 @@
+li {
+  padding: 8px;
+  margin:5px;
+  background: #95ff0a;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 8px;
+  margin: 5px;
+  background: #88748d
+}
+
+.form-group {
+  margin-bottom: 8px;
+}

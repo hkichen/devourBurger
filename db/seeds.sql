@@ -1,14 +1,14 @@
 insert into burgers (burger_name, devoured)
-values ("Double Cheese Burger", 0);
+values ("Double Cheese Burger");
 
 insert into burgers (burger_name, devoured)
-values ("Goat Cheese and fig relish Burger", 0);
+values ("Goat Cheese and fig relish Burger");
 
 insert into burgers (burger_name, devoured)
-values ("Baconator Burger", 0);
+values ("Baconator Burger");
 
 insert into burgers (burger_name, devoured)
-values ("Bison Burger", 0);
+values ("Bison Burger", true);
 
 insert into burgers (burger_name, devoured)
-values ("Smoked BBQ Burger", 0);
+values ("Smoked BBQ Burger", true);
