@@ -45,5 +45,3 @@ $(function() {
 
 });
 
-
-//no delete?

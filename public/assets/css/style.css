@@ -1,7 +1,11 @@
-li {
+ul {
   padding: 8px;
-  margin:5px;
-  background: #95ff0a;
+  margin-left: 35px;
+  font-size: 28px;
+}
+
+li {
+  padding: 5px;
 }
 
 .label {
@@ -16,4 +20,59 @@ li {
 
 .form-group {
   margin-bottom: 8px;
+}
+
+body {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #c9bdc5;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #210b2b;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #faf9d5;
+  background: #b0204b;
+  padding: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+button {
+  background: #fd8d5a;
+  background-image: -webkit-linear-gradient(top, #fd8d5a, #b0204b);
+  background-image: -moz-linear-gradient(top, #fd8d5a, #b0204b);
+  background-image: -ms-linear-gradient(top, #fd8d5a, #b0204b);
+  background-image: -o-linear-gradient(top, #fd8d5a, #b0204b);
+  background-image: linear-gradient(to bottom, #fd8d5a, #b0204b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 5px;
+  text-shadow: 3px 2px 1px #b0204b;
+  font-family: Arial;
+  color: #fafafa;
+  font-size: 20px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #2b0119;
+}
+
+form {
+  font-size: 28px;
+
+}
+
+.content{
+  background: #faf9d5;
 }

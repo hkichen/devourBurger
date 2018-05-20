@@ -1,6 +1,7 @@
-<<h1>Create and "Eat" to your Heart's Content</h1>
+<h1>Create  and  Eat  to  your  Heart's  Content</h1>
 
-<h2>Options</h2>
+<div class="content">
+  <h2>Options</h2>
 
 <ul>
   {{#each burgers}}
@@ -9,7 +10,7 @@
     {{/unless}}
   {{/each}}
 </ul>
-
+<br><br>
 <h2>The Eaten</h2>
 
 <ul>
@@ -20,6 +21,7 @@
   {{/each}}
 </ul>
 
+<br><br>
 <h2>Make your Dream Burger</h2>
 <form class="create-form">
 
@@ -29,10 +31,12 @@
   </div>
 
   <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> devoured!<br>
+    <label for="devoured">Make it and stare at it's glory or eat it?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
     <input type="radio" name="devoured" value="0"> Created!
   </div>
 
   <button type="submit">Add Burger</button>
 </form>
+</div>
+
