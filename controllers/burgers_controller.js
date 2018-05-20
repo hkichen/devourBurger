@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 //add burger to database
-router.post("/", function(req, res) {
+router.post("/api/burgers", function(req, res) {
   burger.insertOne([
     "burger_name", "devoured"
   ], [

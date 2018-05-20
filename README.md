@@ -19,7 +19,7 @@ GitHub Repo: https://github.com/hkichen/devourBurger
 # Troubleshooting
 1. I am unable to add a new burger or update my burgers already listed. Attempting to add a burger results in an error message:"Uncaught ReferenceError: newDevoured is not defined" in the burgers.js file
 
-2. A 404 error is the response when clicking on the buttons to eat or create the burger.
+2. A 404 error is given when clicking on the buttons to eat or create the burger.
 
 # Thoughts
-This is a rough work in progress. The skeleton of the app is laid out, but there's still a lot more to do before I can even make it look pretty.
+This is a rough work in progress. The skeleton of the app is laid out, but there's still a lot more to do to have it functioning smoothly.
