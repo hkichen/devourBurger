@@ -3,11 +3,12 @@ var express = require("express");
 var router = express.Router();
 
 //add burger to database
-router.post("/api/burgers", function(req, res) {
+router.post("/", function(req, res) {
+  console.log(req.body)
   burger.insertOne([
     "burger_name", "devoured"
   ], [
-    req.body.burger_name, req.body.devoured
+    req.body.name, req.body.devoured
   ], function(result) {
     res.json({
       id: result.insertId 
@@ -16,7 +17,7 @@ router.post("/api/burgers", function(req, res) {
 });
 
 //update burger info
-router.put("/api/burger/:id", function(req, res) {
+router.put("/:id", function(req, res) {
   var condition = "id = " + req.params.id;
   
   console.log("condition: " , condition);
@@ -24,7 +25,6 @@ router.put("/api/burger/:id", function(req, res) {
   burger.updateOne({
     devoured: req.body.devoured
   }, condition, function(result) {
-    console.log("jello");
     if(result.changedRows == 0) {
       return res.status(404).end();
     }else {
