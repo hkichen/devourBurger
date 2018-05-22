@@ -4,7 +4,6 @@ var router = express.Router();
 
 //add burger to database
 router.post("/", function(req, res) {
-  console.log(req.body)
   burger.insertOne([
     "burger_name", "devoured"
   ], [
